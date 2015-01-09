@@ -1,0 +1,21 @@
+<p>
+  <strong>Name:</strong>
+  <%= @staffs.name%>
+</p>
+
+<p>
+  <strong>Ic:</strong>
+  <%= @staffs.ic%>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @staffs.position%>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @staffs.address%>
+</p>
+
+<%= link_to "Delete", staffs_delete_path(:id => @staff.id) %> |

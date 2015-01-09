@@ -1,0 +1,17 @@
+<h1>Listing Staffs</h1>
+
+<% @staffs.each do |staff| %>
+<strong> Name: </strong> <%= staff.name %><br>
+<strong> IC Number: </strong> <%= staff.ic %><br>
+<strong> Position: </strong> <%= staff.position %><br>
+<strong> Address: </strong> <%= staff.address %><br>
+
+<%= link_to 'Show', staff %></td> |
+<%= link_to 'Edit', edit_staff_path(staff) %></td> |
+<%= link_to "Delete", staff_path(:id => staff.id) , :method => "delete", :data => {:confirm => "Are you sure?"} %>
+<br><br>
+<% end %>
+
+<%= link_to 'New staff', new_staff_path %> |
+<%= link_to 'VEHICLES LIST', vehicles_path %>
+

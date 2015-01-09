@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>IC</th>
+      <th>POSITION</th>
+      <th>ADDRESS</th>
+      <th>VEHICLE 1</th>
+      <th>VEHICLE 2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<tbody>
+      <tr>
+        <td><%= @staff.name%></td>
+        <td><%= @staff.ic%></td>
+        <td><%= @staff.position%></td>
+        <td><%= @staff.address%></td>
+        <% @staff.vehicles.each do |v| %>
+            <td><%= v.vehicle_model %></td>
+        <% end %>
+      </tr>
+</tbody>
+</table>
+
+<%= link_to 'Back', staffs_path %> |
+<%= link_to 'Edit', edit_staff_path(@staff) %>
