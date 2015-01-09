@@ -19,7 +19,7 @@
         <td><%= vehicle.vehicle_model %></td>
         <td><%= vehicle.color %></td>
         <td><%= vehicle.plate_num %></td>
-        <td><%= vehicle.staff.name %></td>
+        <td><%= vehicle.staff.name rescue "unknown" %></td>
         <td><%= button_to "SHOW", vehicle, :class => "button", :method => :get  %></td>
         <td><%= button_to "EDIT", edit_vehicle_path(vehicle), :class => "button", :method => :get  %></td>
         <td><%= button_to "DELETE", vehicle, :method => :delete %></td>

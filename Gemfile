@@ -44,6 +44,7 @@ group :development, :test do
   
   gem 'devise'
   gem 'simple_form'
-  gem "twitter-bootstrap-rails"
+  #gem "twitter-bootstrap-rails"
+  gem 'bootstrap-sass'
   
 end
