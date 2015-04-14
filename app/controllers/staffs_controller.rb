@@ -42,7 +42,7 @@ class StaffsController < ApplicationController
         Staff.find(params[:id]).destroy 
         redirect_to(:action => 'index')
     end 
-    
+
     private
         def staff_params
             params.require(:staff).permit(:name, :ic, :position, :address)

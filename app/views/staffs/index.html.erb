@@ -5,13 +5,26 @@
 <strong> IC Number: </strong> <%= staff.ic %><br>
 <strong> Position: </strong> <%= staff.position %><br>
 <strong> Address: </strong> <%= staff.address %><br>
+<strong> Room: </strong> <%= staff.rooms.count %><br>
+    <% icNum = staff.ic %>
+    <% number = icNum.to_s.chars.map(&:to_i) %>
+    <% last = number.last %>
+    <% num = last % 2 %>
+    
+     <% if num == 0 %>
+        <% gender ="Female" %>
+     <% else %>
+        <% gender ="Male" %>
+     <% end %>
+     
+<strong> Gender: </strong> <%= gender %><br>
 
 <%= link_to 'Show', staff %></td> |
 <%= link_to 'Edit', edit_staff_path(staff) %></td> |
 <%= link_to "Delete", staff_path(:id => staff.id) , :method => "delete", :data => {:confirm => "Are you sure?"} %>
 <br><br>
+
 <% end %>
 
 <%= link_to 'New staff', new_staff_path %> |
 <%= link_to 'VEHICLES LIST', vehicles_path %>
-

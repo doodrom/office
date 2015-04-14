@@ -1,28 +1,38 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>NAME</th>
-      <th>IC</th>
-      <th>POSITION</th>
-      <th>ADDRESS</th>
-      <th>VEHICLE 1</th>
-      <th>VEHICLE 2</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table border ="0", width = "40%">
+  <thead></thead>
+  
 <tbody>
-      <tr>
+
+     <tr>
+        <td><strong> Name: </strong></td> 
         <td><%= @staff.name%></td>
+    </tr>
+    <tr>
+        <td><strong> IC Number: </strong></td> 
         <td><%= @staff.ic%></td>
+    </tr>
+    <tr>
+        <td><strong> Position: </strong></td> 
         <td><%= @staff.position%></td>
+    </tr>
+    <tr>
+        <td><strong> Address: </strong></td> 
         <td><%= @staff.address%></td>
+    </tr>
+    <tr>
+        <td><strong> Vehicle Plate Number: </strong></td> 
         <% @staff.vehicles.each do |v| %>
-            <td><%= v.vehicle_model %></td>
+            <td><%= v.plate_num %></td>
         <% end %>
-      </tr>
+    </tr>
+    <tr>
+        <td><strong> Room Name: </strong></td> 
+        <% @staff.rooms.each do |r| %>
+            <td><%= r.room_name %>,</td>
+        <% end %>
+     </tr>
 </tbody>
 </table>
-
+<br>
 <%= link_to 'Back', staffs_path %> |
 <%= link_to 'Edit', edit_staff_path(@staff) %>

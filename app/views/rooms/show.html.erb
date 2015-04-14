@@ -1,0 +1,14 @@
+<p>
+  <strong>Room:</strong>
+  <%= @room.room_name %>
+</p>
+
+<p>
+  <ul><strong>Staff Name:</strong>
+  <% @room.staffs.each do |staff| %>
+  <%= staff.name %><br>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
